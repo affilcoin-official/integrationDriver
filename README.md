@@ -6,7 +6,8 @@
 ```
 git clone ... /gateway
 cd gateway
-npm run setup
+npm i
+vi config.json
 ```
 
 Change the config
@@ -22,9 +23,12 @@ Change the config
 ```
 
 Please change `mnemonic` and keep it in secret
+Change port
 
 ```
-npm run start
+npm i pm2 -g
+lsc -c server.ls
+pm2 start server.js
 ```
 
 
@@ -33,7 +37,7 @@ npm run start
 
 ### Get Balance
 
-Supports eth, btc, ltc, dash, usdt
+Supports eth, ac
 
 ```Javascript 
 
@@ -79,7 +83,7 @@ var superagent = require('superagent');
 var recipient = {
     to: '0x...',
     amount: '1' //ETH,
-    feeType: 'fast'
+    feeType: 'cheap'
 }
 
 superagent.post(serverPath + '/calc-fee/eth/0', recipient).end((err, data) => {
@@ -101,7 +105,7 @@ var superagent = require('superagent');
 var recipient = {
     to: '0x...',
     amount: '1' //ETH,
-    feeType: 'fast'
+    feeType: 'cheap'
 }
 
 superagent.post(serverPath + '/send/eth/0', recipient).end((err, data) => {
@@ -109,3 +113,9 @@ superagent.post(serverPath + '/send/eth/0', recipient).end((err, data) => {
     console.log(data.body);
     
 })
+```
+
+### Get Block
+```
+Methods for getting the last block in chain and transactions on the block are similar to Ethereum methods (eth_blockNumber and eth_getBlockByNumber)
+```
