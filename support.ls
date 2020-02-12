@@ -1,0 +1,1 @@
+module.exports = <[ BTC ETH LTC DASH ]>

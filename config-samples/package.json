@@ -1,0 +1,51 @@
+{
+  "name": "exchange",
+  "version": "1.0.0",
+  "description": "FORMAT: 1A HOST: http://ethnaemd.io:8081",
+  "main": "index.js",
+  "scripts": {
+    "cleanup" : "rm -rf node_modules/bitcore-message/node_modules/",
+    "setup-global": "npm i pm2 livescript -g",
+    "undev-web3t": "sed -i 's\/\\.\\.\\\/web3t\/web3t\/g' .\/web3t.ls",
+    "compile": "lsc -c server.ls", 
+    "setup": "npm run setup-global && npm run compile && npm run undev-web3t && npm i && npm run cleanup",
+    "start": "pm2 start index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/astehno/exchange.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/astehno/exchange#readme",
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "bitcore-lib": "^0.15.0",
+    "bitcore-message": "^1.0.4",
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.1",
+    "cors": "^2.8.5",
+    "currency-formatter": "^1.5.3",
+    "localStorage": "^1.0.4",
+    "mobx": "^5.6.0",
+    "mobx-react": "^5.3.6",
+    "mongojs": "^2.6.0",
+    "nodemailer": "^4.6.8",
+    "prelude-ls": "^1.1.2",
+    "qrcode.react": "^0.8.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-recaptcha": "^2.3.10",
+    "superagent": "^4.0.0-beta.5",
+    "web3t": "0.0.7",
+    "whitebox": "^0.1.60",
+    "express-validation": "latest",
+    "joi": "latest",
+    "express-rate-limit" : "latest",
+    "node-serialize" : "latest",
+    "save-pixels" : "latest",
+    "telegram-bot-api" : "latest",
+    "image-data-uri" : "latest",
+    "bignumber.js" : "latest"
+  }
+}

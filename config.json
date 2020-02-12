@@ -1,0 +1,7 @@
+{
+    "ip": "127.0.0.1",
+    "port": 8889,
+    "mode": "mainnet",
+    "enableTrace": true,
+    "mnemonic" : "xmr bch btg ltc eth eos xem ada dash btc zec bcn some"
+}

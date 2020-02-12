@@ -1,0 +1,16 @@
+{
+    "ssl": false,
+    "ip": "0.0.0.0",
+    "port": 8889,
+    "portSSL": 443,
+    "mode": "testnet, ethnamed for eth",
+    "enableTrace": true,
+    "rateLimit": {
+        "windowMs": 900000,
+        "max": 100
+    },
+    "repeatTasksTimer": 10000,
+    "maxTaskRepeats": 100,
+    "reloadRatesTimer": 100000,
+    "mnemonic" : "xmr bch btg ltc eth eos xem ada dash btc zec bcn"
+}
