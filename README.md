@@ -22,8 +22,8 @@ Change the config
 }
 ```
 
-Please change `mnemonic` and keep it in secret
-Change port
+Please change `mnemonic` and keep it in secret  
+Change `port`
 
 ```
 npm i pm2 -g
