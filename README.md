@@ -117,5 +117,6 @@ superagent.post(serverPath + '/send/eth/0', recipient).end((err, data) => {
 
 ### Get Block
 ```
-Methods for getting the last block in chain and transactions on the block are similar to Ethereum methods (eth_blockNumber and eth_getBlockByNumber)
+Methods for getting the last block in chain and transactions on the block are similar to Ethereum methods
+(eth_blockNumber and eth_getBlockByNumber)
 ```
